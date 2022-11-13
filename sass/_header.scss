@@ -1,0 +1,43 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.navigation__logo {
+    margin-right: 93px;
+}
+
+.navigation__nav {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+}
+.menu {}
+
+.menu {
+  display: flex;
+  gap: 52px;
+  
+ 
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  /* outline: 2px solid red;
+    outline-offset: -2px; */
+}
+/* flex-wrap: wrap; дозволяє елементам переноситися на інший рядок */

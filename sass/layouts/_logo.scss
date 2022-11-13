@@ -1,0 +1,20 @@
+.logo,
+.logo-web {
+  color: var(--color-logo-studio-top);
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-web {
+  color: var(--color-logo-web-top);
+}
+
+.logo {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  
+}

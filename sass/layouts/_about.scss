@@ -1,0 +1,125 @@
+/* ховаю заголовок (наші особливості) */
+.feature-list__h2 {
+  font-size: 0px;
+}
+.pravylo {
+  flex-basis: calc((100% - 30px - 30px - 30px) / 4);
+}
+
+.pravylo__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--color-background-our-team);
+  border-radius: 4%;
+}
+
+/* колір заголовків.. а колір тексту визначається як основний на сторінці */
+
+.feature-list__title {
+  color: var(--color-text-title);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feature-list__container {
+  display: flex;
+  gap: 30px;
+}
+
+.container-photo {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.container-photo__kartyna {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-robota {
+  padding-top: 0;
+
+  // & h2 {
+  //   color: var(--color-text-title);
+  //   font-style: normal;
+  //   font-weight: 700;
+  //   font-size: 36px;
+  //   line-height: 1.16;
+  //   text-align: center;
+  //   letter-spacing: 0.03em;
+  //   margin-top: auto;
+  //   margin-bottom: 50px;
+  // }
+}
+
+.photo-robota__h {
+  color: var(--color-text-title);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.photo-robota__mar {
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+.container-photo__robota {
+  display: block;
+}
+
+.robota-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.robota-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--color-robota-overlay-background);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  /* 
+    анімція щоб вилізло  */
+  /* transform: translateY(100%); */
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  justify-content: center;
+  align-items: center;
+
+  .container-photo__robota:hover &,
+  .container-photo__robota:focus & {
+    transform: translateY(0);
+  }
+
+  & p {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--background-color-our-team-li);
+  }
+}
+
+// .container-photo{  }

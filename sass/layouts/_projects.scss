@@ -1,0 +1,49 @@
+/* секція із фотографіями */
+/* ховаю заголовок h1 */
+
+.projects h1 {
+  font-size: 0px;
+}
+.projects h2 {
+  color: var(--color-text-filter-but);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  /* padding-left: 24px; */
+  margin-bottom: auto;
+}
+.projects p {
+  color: var(--color-text-paragraph);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  /* padding-left: 24px; */
+  margin-top: auto;
+  // margin-bottom: 20px;
+}
+
+.photo-h2 {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+  border-left: 1px solid var(--color-photo-h2-border);
+  border-bottom: 1px solid var(--color-photo-h2-border);
+  border-right: 1px solid var(--color-photo-h2-border);
+}
+.photo-h2 h2 {
+  margin-bottom: 4px;
+}
+
+.container-photo {
+  display: flex;
+  gap: 30px;
+  padding-left: 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

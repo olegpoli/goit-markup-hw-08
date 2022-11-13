@@ -1,0 +1,23 @@
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul,
+p,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+/* скидання всіх крапок в ненумерованих списках не глобально */
+.list {
+  list-style: none;
+}
+/* скидання глобально для ссилок нижнє підкреслення */
+a {
+  text-decoration: none;
+}
