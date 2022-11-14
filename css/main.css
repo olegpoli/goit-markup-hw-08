@@ -45,6 +45,7 @@ img {
   display: block;
   width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 ul,
@@ -71,8 +72,14 @@ a {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .header__container {
@@ -96,7 +103,7 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -104,6 +111,21 @@ a {
   box-sizing: border-box;
   /* outline: 2px solid red;
     outline-offset: -2px; */
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /* flex-wrap: wrap; дозволяє елементам переноситися на інший рядок */
@@ -228,7 +250,6 @@ body {
 /* синя лінія */
 /* Рішення для бізнесу hero     під шапкою перша секція */
 .hero {
-  max-width: 1600px;
   background-color: var(--color-background-hero);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -237,6 +258,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media screen and (max-width: 1170px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
 .hero__mar {
@@ -253,6 +280,15 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   width: 696px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1170px) {
+  .hero__title {
+    width: 100%;
+    font-size: 26px;
+  }
 }
 
 .hero__title-mar {
@@ -278,47 +314,33 @@ body {
   color: var(--color-accent-text-button);
   background-color: var(--color-accent-background-button);
 }
-
-/* ховаю заголовок (наші особливості) */
-.feature-list__h2 {
-  font-size: 0px;
-}
-
-.pravylo {
-  flex-basis: calc((100% - 30px - 30px - 30px) / 4);
-}
-
-.pravylo__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--color-background-our-team);
-  border-radius: 4%;
-}
-
-/* колір заголовків.. а колір тексту визначається як основний на сторінці */
-.feature-list__title {
-  color: var(--color-text-title);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.feature-list__container {
-  display: flex;
-  gap: 30px;
+@media screen and (max-width: 1170px) {
+  .button {
+    padding: 10px 24px;
+  }
 }
 
 .container-photo {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .container-photo__desktop {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .container-photo__desktop {
+    width: calc((100% - 30px - 30px) / 3);
+  }
+}
+
+.container-photo__robota {
+  display: block;
 }
 
 .container-photo__kartyna {
@@ -335,19 +357,28 @@ body {
   color: var(--color-text-title);
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
 }
+@media screen and (min-width: 768px) {
+  .photo-robota__h {
+    font-size: 28px;
+  }
+}
 
 .photo-robota__mar {
   margin-top: auto;
-  margin-bottom: 50px;
 }
-
-.container-photo__robota {
-  display: block;
+@media screen and (min-width: 768px) {
+  .photo-robota__mar {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .photo-robota__mar {
+    margin-bottom: 30px;
+  }
 }
 
 .robota-thumb {
@@ -389,6 +420,27 @@ body {
 }
 
 /* наша команда фотографії працівників */
+.container-our-team {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.container-our-team li {
+  background-color: var(--background-color-our-team-li);
+}
+
+@media screen and (min-width: 768px) {
+  .our_cards {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .our_cards {
+    width: calc((100% - 30px - 30px - 30px) / 4);
+  }
+}
+
 .our-team {
   background-color: var(--color-background-our-team);
 }
@@ -401,8 +453,13 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: auto;
-  /* margin-bottom: auto; */
   margin-bottom: 50px;
+}
+@media screen and (max-width: 1170px) {
+  .our-team h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 .our-team .list h3 {
@@ -429,15 +486,6 @@ body {
 .our-h3 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.container-our-team {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-.container-our-team li {
-  background-color: var(--background-color-our-team-li);
 }
 
 .socials {
@@ -478,6 +526,30 @@ body {
   justify-content: center;
 }
 
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.regular-customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .regular-customers {
+    width: calc((100% - 30px - 30px) / 3);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .regular-customers {
+    width: calc((100% - 30px - 30px - 30px - 30px - 30px) / 6);
+  }
+}
+
 .regular h2 {
   color: var(--color-text-title);
   font-style: normal;
@@ -489,14 +561,11 @@ body {
   margin-top: auto;
   margin-bottom: 50px;
 }
-
-.regular-customers:not(:last-child) {
-  display: flex;
-  flex-basis: calc((100% - 0px) / 5);
-}
-
-.customers {
-  display: flex;
+@media screen and (max-width: 1170px) {
+  .regular h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 .customers-link {
@@ -519,6 +588,55 @@ body {
   justify-content: center;
   fill: var(--color-accent-primary-icon);
   border: 1px solid var(--color-accent-primary-icon);
+}
+
+/* ховаю заголовок (наші особливості) */
+.feature-list__h2 {
+  font-size: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .pravylo {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .pravylo {
+    width: calc((100% - 30px - 30px - 30px) / 4);
+  }
+}
+
+.feature-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pravylo__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--color-background-our-team);
+  border-radius: 4%;
+}
+
+/* колір заголовків.. а колір тексту визначається як основний на сторінці */
+.feature-list__title {
+  color: var(--color-text-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 /* підвал футер */
@@ -968,7 +1086,7 @@ label {
   margin-bottom: 4px;
 }
 
-.container-photo {
+.container-ph {
   display: flex;
   gap: 30px;
   padding-left: 0px;

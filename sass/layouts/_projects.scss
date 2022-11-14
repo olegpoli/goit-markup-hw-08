@@ -40,10 +40,19 @@
   margin-bottom: 4px;
 }
 
-.container-photo {
+// .container-photo {
+//   display: flex;
+//   gap: 30px;
+//   padding-left: 0px;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
+
+.container-ph {
   display: flex;
   gap: 30px;
   padding-left: 0px;
   flex-wrap: wrap;
   justify-content: center;
 }
+

@@ -1,0 +1,58 @@
+/* ховаю заголовок (наші особливості) */
+.feature-list__h2 {
+    font-size: 0px;
+  
+  }
+  .pravylo {
+    // margin-bottom: 30px;
+   
+    @media screen and ( min-width: 768px ) { 
+      width: calc((100% - 30px ) / 2);
+      }
+
+       @media screen and ( min-width: 1170px ) { 
+        width: calc((100% - 30px - 30px - 30px  ) / 4);
+         }
+
+  }
+
+  .feature-list__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pravylo__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--color-background-our-team);
+    border-radius: 4%;
+  }
+  
+  /* колір заголовків.. а колір тексту визначається як основний на сторінці */
+  
+  .feature-list__title {
+    color: var(--color-text-title);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+ 
+  
+  
+  
